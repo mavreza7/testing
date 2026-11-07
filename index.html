@@ -1,152 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SINKARKES Versi Saya — Verifikasi Dokumen</title>
-<style>
-:root{--navy:#123d68;--blue:#1769aa;--cyan:#e9f5fc;--ink:#1e2b3a;--muted:#64748b;--line:#dce5ee;--green:#16845b;--red:#b42318;--gold:#e7a72e}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#f3f7fb}
-header{background:linear-gradient(120deg,#103b66,#1978b8);color:white;padding:24px max(20px,calc((100% - 1180px)/2));}
-.brand{display:flex;align-items:center;gap:13px}.mark{width:48px;height:48px;border-radius:14px;background:#fff;color:#1769aa;display:grid;place-items:center;font-weight:900;font-size:22px}
-.brand h1{font-size:20px;margin:0}.brand p{font-size:12px;margin:4px 0 0;opacity:.85}
-nav{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}nav button{border:1px solid #ffffff55;background:#ffffff14;color:white;border-radius:9px;padding:10px 14px;cursor:pointer;font-weight:600}nav button.active,nav button:hover{background:white;color:var(--navy)}
-main{max-width:1180px;margin:28px auto;padding:0 18px}.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:stretch}.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:24px;box-shadow:0 5px 20px #183b5c08}
-.kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero h2{font-size:clamp(25px,3vw,36px);margin:10px 0}.hero p{line-height:1.65;color:var(--muted);margin:0}.notice{margin-top:17px;background:#fff8e7;border:1px solid #f5dfaa;color:#73531a;padding:12px 14px;border-radius:11px;font-size:13px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:20px 0}.stat{padding:17px;background:white;border:1px solid var(--line);border-radius:14px}.stat b{display:block;font-size:22px;color:var(--navy)}.stat span{font-size:12px;color:var(--muted)}
-h3{margin:0 0 17px;font-size:18px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:700;color:#34465a}input,select,textarea{width:100%;border:1px solid #cbd7e3;border-radius:10px;padding:12px;font:inherit;background:white;color:var(--ink)}input:focus,select:focus{outline:2px solid #8cc7ef;border-color:#4d9fd8}
-.btn{border:0;border-radius:10px;padding:12px 17px;background:var(--blue);color:white;font-weight:750;cursor:pointer}.btn.secondary{background:#eaf2f8;color:var(--navy)}.btn.danger{background:#b42318}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
-.result{margin-top:18px;border:1px solid var(--line);background:#f8fbfe;border-radius:13px;padding:16px;display:none}.result.show{display:block}.result.valid{border-color:#9ed8bd;background:#effaf4}.result.invalid{border-color:#f2b7b2;background:#fff4f3}.result h4{margin:0 0 8px}.result p{margin:5px 0;color:var(--muted);font-size:14px}
-.hidden{display:none!important}.section{margin-top:22px}.adminbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.tablewrap{overflow:auto;margin-top:15px}table{width:100%;border-collapse:collapse;min-width:700px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:13px}th{background:#f2f7fb;color:#52657a}.pill{display:inline-block;padding:4px 9px;border-radius:20px;background:#e9f6ef;color:#14734d;font-weight:700;font-size:11px}.pill.expired{background:#fff0ed;color:#a12a20}.footer{padding:24px;text-align:center;color:#758397;font-size:12px}
-@media(max-width:760px){.hero{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}header{padding:20px}.panel{padding:18px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f8c">
+  <title>Portal Verifikasi Dokumen — Simulasi Akademik</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="brand"><div class="mark">SV</div><div><h1>SINKARKES Versi Saya</h1><p>Sistem Informasi Verifikasi Dokumen</p></div></div>
-  <nav>
-    <button class="active" data-tab="home">Beranda & Verifikasi</button>
-    <button data-tab="admin">Admin Dokumen</button>
+  <div class="demo-strip"><i class="fa-solid fa-circle-info me-2"></i>PROYEK SIMULASI AKADEMIK — BUKAN LAYANAN RESMI DAN TIDAK TERHUBUNG KE DATABASE PEMERINTAH</div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="brand-mark"><i class="fa-solid fa-file-circle-check"></i></span>
+        <span><strong>PORTAL DOKUMEN</strong><small class="d-block text-secondary">Sistem Verifikasi · Demo Akademik</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#panduan">Tata Cara</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cek-dokumen">Cek Dokumen</a></li>
+          <li class="nav-item"><button class="btn btn-sm btn-outline-teal ms-lg-2" id="languageBtn" type="button">EN</button></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
-<main>
-  <section id="home">
-    <div class="hero">
-      <div class="panel">
-        <div class="kicker">Layanan verifikasi online</div>
-        <h2>Periksa keabsahan dokumen dengan mudah</h2>
-        <p>Masukkan nomor dokumen untuk memeriksa statusnya pada database penerbit. Gunakan hanya untuk dokumen yang dikelola oleh organisasi Anda.</p>
-        <div class="notice"><b>Informasi:</b> Website ini adalah sistem mandiri, bukan portal resmi Kementerian Kesehatan RI. Hasil verifikasi hanya merujuk pada data yang dimasukkan oleh administrator sistem ini.</div>
-      </div>
-      <div class="panel">
-        <div class="kicker">Langkah cepat</div><h3 style="margin-top:10px">Cara melakukan verifikasi</h3>
-        <p style="margin-bottom:10px">1. Pilih jenis dokumen.</p><p style="margin-bottom:10px">2. Masukkan nomor registrasi.</p><p style="margin-bottom:10px">3. Tekan tombol <b>Periksa Dokumen</b>.</p><p>4. Periksa nama, tanggal, dan status yang ditampilkan.</p>
-      </div>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>24/7</b><span>Pengecekan online</span></div>
-      <div class="stat"><b>QR</b><span>Siap untuk tautan verifikasi</span></div>
-      <div class="stat"><b>Secure</b><span>Data tersimpan di Supabase</span></div>
-    </div>
-    <div class="panel section">
-      <div class="kicker">Pencarian dokumen</div><h3 style="margin-top:8px">Cek Nomor Dokumen</h3>
-      <form id="verifyForm" class="formgrid">
-        <div class="field"><label for="docType">Jenis dokumen</label><select id="docType" required><option value="">Pilih jenis dokumen</option><option>Sertifikat</option><option>Surat Keterangan</option><option>Dokumen Registrasi</option><option>Dokumen Lainnya</option></select></div>
-        <div class="field"><label for="docNumber">Nomor dokumen / barcode</label><input id="docNumber" required placeholder="Contoh: DOC-2026-0001" autocomplete="off"></div>
-        <div class="field full"><button class="btn" type="submit">Periksa Dokumen</button></div>
-      </form>
-      <div id="verifyResult" class="result" aria-live="polite"></div>
-    </div>
-  </section>
 
-  <section id="admin" class="hidden">
-    <div class="panel">
-      <div class="adminbar"><div><div class="kicker">Panel administrator</div><h3 style="margin:7px 0 0">Pengelolaan Dokumen</h3></div><div id="authStatus">Belum login</div></div>
-      <div id="loginArea" class="section">
-        <form id="loginForm" class="formgrid">
-          <div class="field"><label>Email admin</label><input id="email" type="email" required placeholder="admin@domainanda.id"></div>
-          <div class="field"><label>Password</label><input id="password" type="password" required placeholder="Password admin"></div>
-          <div class="field full"><button class="btn" type="submit">Login Admin</button></div>
+  <header class="hero" id="beranda">
+    <div class="container hero-content">
+      <div class="hero-label"><i class="fa-solid fa-shield-halved me-2"></i>LAYANAN INFORMASI DIGITAL</div>
+      <h1 id="heroTitle">Pemeriksaan dan Verifikasi Dokumen</h1>
+      <p id="heroDesc">Periksa data dokumen menggunakan nomor registrasi atau barcode melalui portal simulasi akademik ini.</p>
+      <a href="#cek-dokumen" class="btn btn-light btn-lg fw-bold">Mulai Pemeriksaan <i class="fa-solid fa-arrow-down ms-2"></i></a>
+    </div>
+    <div class="hero-decoration"></div>
+  </header>
+
+  <main class="container content-wrap">
+    <section class="notice-card mb-4" id="informasi">
+      <div class="notice-icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div>
+        <h2>Informasi Penting</h2>
+        <p>Website ini dibuat untuk keperluan pembelajaran dan demonstrasi. Seluruh data yang ditampilkan merupakan data contoh. Hasil pencarian tidak dapat digunakan sebagai bukti keaslian dokumen.</p>
+      </div>
+    </section>
+
+    <section class="section-block" id="panduan">
+      <div class="section-heading">
+        <span class="eyebrow">PANDUAN PENGGUNA</span>
+        <h2>Bagaimana cara melakukan pemeriksaan?</h2>
+        <p>Gunakan salah satu metode berikut untuk mencoba fitur verifikasi simulasi.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <article class="method-card h-100">
+            <div class="method-icon"><i class="fa-solid fa-keyboard"></i></div>
+            <span class="step-tag">CARA 1</span>
+            <h3>Input Nomor Dokumen</h3>
+            <ol>
+              <li>Pilih jenis dokumen pada formulir pemeriksaan.</li>
+              <li>Masukkan nomor dokumen atau barcode.</li>
+              <li>Tekan tombol <strong>Periksa Dokumen</strong>.</li>
+              <li>Hasil simulasi akan ditampilkan di bawah formulir.</li>
+            </ol>
+            <a href="#cek-dokumen" class="btn btn-teal-outline">Buka Formulir <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="method-card h-100">
+            <div class="method-icon"><i class="fa-solid fa-qrcode"></i></div>
+            <span class="step-tag">CARA 2</span>
+            <h3>Pindai QR Code</h3>
+            <ol>
+              <li>Buka kamera atau pemindai QR pada perangkat.</li>
+              <li>Pindai QR demo yang disediakan pada hasil contoh.</li>
+              <li>Salin kode dokumen dari data demo.</li>
+              <li>Masukkan kode tersebut pada formulir pemeriksaan.</li>
+            </ol>
+            <div class="method-tip"><i class="fa-solid fa-lightbulb me-2"></i>Fitur kamera/QR scanner akan ditambahkan pada tahap JavaScript.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block search-section" id="cek-dokumen">
+      <div class="section-heading">
+        <span class="eyebrow">FORMULIR PENCARIAN</span>
+        <h2>Cek Dokumen</h2>
+        <p>Lengkapi jenis dokumen dan nomor identifikasi di bawah ini.</p>
+      </div>
+      <div class="search-card">
+        <form id="verificationForm" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="jenis_dokumen" class="form-label">Jenis Dokumen <span class="text-danger">*</span></label>
+              <select class="form-select form-select-lg" id="jenis_dokumen" required>
+                <option value="">-- Pilih Jenis Dokumen --</option>
+                <option value="icv">ICV (International Certificate of Vaccination)</option>
+                <option value="icv-haji">ICV Haji</option>
+                <option value="phqc">PHQC (Port Health Quarantine Clearance)</option>
+                <option value="izin_karantinaan">Izin Karantina COP</option>
+                <option value="health_book">Buku Kesehatan Kapal</option>
+                <option value="sscec">Sertifikat Sanitasi Kapal (SSCEC/SSCC)</option>
+                <option value="pengujian_kesehatan">Pengujian Kesehatan</option>
+                <option value="pemeriksaan_obat_alkes_kapal">Pengawasan Obat dan Alkes Kapal</option>
+                <option value="sertifikat_air">Pengawasan Kualitas Air</option>
+                <option value="laik_terbang">Sertifikat Laik Terbang</option>
+                <option value="sanitasi_jasaboga">Higienis Jasa Boga</option>
+                <option value="sailing_permit">Sailing Permit</option>
+                <option value="izin_jenazah">Izin Lalu Lintas Jenazah</option>
+                <option value="izin_sakit">Izin Lalu Lintas Orang Sakit</option>
+                <option value="omkaba">Health Certificate</option>
+                <option value="kontraindikasi">Kontraindikasi</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="no_dokumen" class="form-label">Nomor Dokumen / IMO No / Barcode <span class="text-danger">*</span></label>
+              <input class="form-control form-control-lg text-uppercase" id="no_dokumen" type="text" placeholder="Contoh: DEMO-2026-001" autocomplete="off" required>
+              <div class="form-text">Masukkan kode contoh untuk mencoba sistem.</div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <button class="btn btn-teal btn-lg" type="submit" id="searchBtn"><i class="fa-solid fa-magnifying-glass me-2"></i>Periksa Dokumen</button>
+            <button class="btn btn-outline-secondary btn-lg" type="reset"><i class="fa-solid fa-rotate-left me-2"></i>Reset</button>
+          </div>
         </form>
+        <div id="result-block" class="result-block mt-4" aria-live="polite"></div>
       </div>
-      <div id="adminArea" class="hidden section">
-        <form id="docForm" class="formgrid">
-          <div class="field"><label>Nomor dokumen (unik)</label><input id="newNumber" required placeholder="DOC-2026-0001"></div>
-          <div class="field"><label>Jenis dokumen</label><select id="newType" required><option>Sertifikat</option><option>Surat Keterangan</option><option>Dokumen Registrasi</option><option>Dokumen Lainnya</option></select></div>
-          <div class="field"><label>Nama pemilik / penerima</label><input id="newOwner" required></div>
-          <div class="field"><label>Tanggal diterbitkan</label><input id="issuedAt" type="date" required></div>
-          <div class="field"><label>Berlaku sampai (opsional)</label><input id="expiresAt" type="date"></div>
-          <div class="field"><label>Status</label><select id="newStatus"><option value="valid">Valid</option><option value="revoked">Dicabut</option></select></div>
-          <div class="field full"><label>Keterangan</label><input id="newNotes" placeholder="Catatan singkat (opsional)"></div>
-          <div class="field full"><button class="btn" type="submit">Simpan Dokumen</button></div>
-        </form>
-        <div class="adminbar section"><h3 style="margin:0">Dokumen tersimpan</h3><div class="actions"><button id="refreshBtn" class="btn secondary" type="button">Muat ulang</button><button id="logoutBtn" class="btn danger" type="button">Logout</button></div></div>
-        <div class="tablewrap"><table><thead><tr><th>Nomor</th><th>Jenis</th><th>Nama</th><th>Diterbitkan</th><th>Status</th></tr></thead><tbody id="docRows"><tr><td colspan="5">Belum ada data dimuat.</td></tr></tbody></table></div>
+      <div class="demo-hint mt-3">
+        <strong><i class="fa-solid fa-flask me-2"></i>Nomor untuk pengujian:</strong>
+        <span>DEMO-2026-001</span><span>DEMO-2026-002</span><span>DEMO-2026-003</span>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <div><strong>PORTAL DOKUMEN — SIMULASI AKADEMIK</strong><div class="small">Media pembelajaran pengembangan sistem informasi.</div></div>
+      <div class="small">© <span id="year"></span> Proyek Demo Akademik. Bukan situs resmi pemerintah.</div>
     </div>
-  </section>
-</main>
-<div class="footer">SINKARKES Versi Saya · Sistem verifikasi mandiri · Bukan layanan resmi pemerintah</div>
-<script type="module">
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+  </footer>
 
-// Konfigurasi: isi dengan URL dan anon key proyek Supabase Anda.
-const SUPABASE_URL = 'https://YOUR-PROJECT.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR-SUPABASE-ANON-KEY';
-const configured = !SUPABASE_URL.includes('YOUR-PROJECT') && !SUPABASE_ANON_KEY.includes('YOUR-SUPABASE');
-const supabase = configured ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
-
-const $ = (id) => document.getElementById(id);
-document.querySelectorAll('nav button').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b === button));
-  $('home').classList.toggle('hidden', button.dataset.tab !== 'home');
-  $('admin').classList.toggle('hidden', button.dataset.tab !== 'admin');
-}));
-function configMessage(){return 'Supabase belum dikonfigurasi. Isi SUPABASE_URL dan SUPABASE_ANON_KEY di file index.html, lalu jalankan SQL pada supabase-schema.sql.'}
-function showResult(html, valid){const el=$('verifyResult');el.innerHTML=html;el.className='result show '+(valid?'valid':'invalid');}
-$('verifyForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const type=$('docType').value, number=$('docNumber').value.trim();
-  if(!supabase){showResult(`<h4>Konfigurasi diperlukan</h4><p>${configMessage()}</p>`,false);return;}
-  const {data,error}=await supabase.from('verified_documents').select('document_number,document_type,owner_name,issued_at,expires_at,status').eq('document_number',number).eq('document_type',type).maybeSingle();
-  if(error){showResult('<h4>Pengecekan gagal</h4><p>Terjadi masalah saat menghubungi database. Silakan coba lagi.</p>',false);return;}
-  if(!data){showResult('<h4>Dokumen tidak ditemukan</h4><p>Nomor dan jenis dokumen tidak cocok dengan data yang terdaftar.</p>',false);return;}
-  const today=new Date().toISOString().slice(0,10);
-  const expired=data.expires_at && data.expires_at < today;
-  const valid=data.status==='valid' && !expired;
-  const status=valid?'VALID':(data.status==='revoked'?'DICABUT':'KEDALUWARSA');
-  showResult(`<h4>Status: ${status}</h4><p><b>Nomor:</b> ${escapeHtml(data.document_number)}</p><p><b>Jenis:</b> ${escapeHtml(data.document_type)}</p><p><b>Nama:</b> ${escapeHtml(data.owner_name)}</p><p><b>Diterbitkan:</b> ${escapeHtml(data.issued_at||'-')}</p><p><b>Berlaku sampai:</b> ${escapeHtml(data.expires_at||'Tidak ditentukan')}</p><p><b>Dicek pada:</b> ${new Date().toLocaleString('id-ID')}</p>`,valid);
-});
-function escapeHtml(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-$('loginForm').addEventListener('submit', async e=>{
-  e.preventDefault();
-  if(!supabase){alert(configMessage());return;}
-  const {error}=await supabase.auth.signInWithPassword({email:$('email').value,password:$('password').value});
-  if(error){alert('Login gagal. Periksa email dan password.');return;}
-  await updateAuthUI();
-});
-async function updateAuthUI(){
-  if(!supabase){$('authStatus').textContent='Supabase belum dikonfigurasi';return;}
-  const {data:{session}}=await supabase.auth.getSession();
-  $('authStatus').textContent=session?'Login sebagai '+session.user.email:'Belum login';
-  $('loginArea').classList.toggle('hidden',!!session);$('adminArea').classList.toggle('hidden',!session);
-  if(session) await loadDocs();
-}
-$('docForm').addEventListener('submit',async e=>{
-  e.preventDefault();if(!supabase)return;
-  const row={document_number:$('newNumber').value.trim(),document_type:$('newType').value,owner_name:$('newOwner').value.trim(),issued_at:$('issuedAt').value,expires_at:$('expiresAt').value||null,status:$('newStatus').value,notes:$('newNotes').value.trim()};
-  const {error}=await supabase.from('verified_documents').insert(row);
-  if(error){alert('Tidak dapat menyimpan. Pastikan nomor dokumen belum pernah dipakai dan akun admin memiliki izin.');return;}
-  e.target.reset();await loadDocs();alert('Dokumen berhasil disimpan.');
-});
-async function loadDocs(){
-  const {data,error}=await supabase.from('verified_documents').select('document_number,document_type,owner_name,issued_at,status').order('created_at',{ascending:false}).limit(100);
-  if(error){$('docRows').innerHTML='<tr><td colspan="5">Gagal memuat data. Periksa izin database.</td></tr>';return;}
-  $('docRows').innerHTML=data.length?data.map(d=>`<tr><td>${escapeHtml(d.document_number)}</td><td>${escapeHtml(d.document_type)}</td><td>${escapeHtml(d.owner_name)}</td><td>${escapeHtml(d.issued_at||'-')}</td><td><span class="pill ${d.status!=='valid'?'expired':''}">${escapeHtml(d.status)}</span></td></tr>`).join(''):'<tr><td colspan="5">Belum ada dokumen.</td></tr>';
-}
-$('refreshBtn').addEventListener('click',loadDocs);
-$('logoutBtn').addEventListener('click',async()=>{await supabase.auth.signOut();await updateAuthUI();});
-if(supabase)supabase.auth.onAuthStateChange(()=>updateAuthUI());else updateAuthUI();
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
