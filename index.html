@@ -1,225 +1,315 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#087f8c">
-  <title>Portal Verifikasi Dokumen — Simulasi Akademik</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="demo-strip"><i class="fa-solid fa-circle-info me-2"></i>PROYEK SIMULASI AKADEMIK — BUKAN LAYANAN RESMI DAN TIDAK TERHUBUNG KE DATABASE PEMERINTAH</div>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title>Sistem Informasi Kesehatan Pelabuhan</title>	
+
+		<meta name="description" content="Sistem Informasi Kekarantinaan Kesehatan Kementerian Republik Indonesia">
+		<meta name="author" content="Ardi Soebrata">
+		<meta name="keywords" content="Kekarantinaan Kesehatan, Kementerian Kesehatan, Republik Indonesia">
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="https://sinkarkes.kemkes.go.id/assets/img/favicons/apple-touch-icon.png?v=bkk2026">
+		<link rel="icon" type="image/png" href="https://sinkarkes.kemkes.go.id/assets/img/favicons/favicon-32x32.png?v=bkk2026" sizes="32x32">
+		<link rel="icon" type="image/png" href="https://sinkarkes.kemkes.go.id/assets/img/favicons/favicon-16x16.png?v=bkk2026" sizes="16x16">
+		<link rel="manifest" href="https://sinkarkes.kemkes.go.id/assets/img/favicons/manifest.json?v=bkk2026">
+		<link rel="mask-icon" href="https://sinkarkes.kemkes.go.id/assets/img/favicons/safari-pinned-tab.svg?v=bkk2026" color="#40ada6">
+		<link rel="shortcut icon" href="https://sinkarkes.kemkes.go.id/assets/img/favicons/favicon.ico?v=bkk2026">
 
 
-<header class="portal-header">
-  <div class="container portal-header-inner">
+		<meta name="apple-mobile-web-app-title" content="Simkespel">
+		<meta name="application-name" content="Simkespel">
+		<meta name="msapplication-config" content="https://sinkarkes.kemkes.go.id/assets/img/favicons/browserconfig.xml?v=bkk2026">
+		<meta name="theme-color" content="#40ada6">
 
-    <!-- LOGO DAN NAMA WEBSITE -->
-    <a class="portal-brand" href="#beranda">
-      <span class="brand-mark">
-        <i class="fa-solid fa-file-circle-check"></i>
-      </span>
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-      <span class="brand-text">
-        <strong>PORTAL DOKUMEN</strong>
-        <small>Sistem Verifikasi · Demo Akademik</small>
-      </span>
-    </a>
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
 
-    <!-- SEARCH BAR -->
-    <form class="portal-search" role="search" id="headerSearch">
-      <input
-        type="search"
-        id="headerSearchInput"
-        placeholder="Search..."
-        aria-label="Cari halaman"
-      >
-      <button type="submit" aria-label="Cari">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/bootstrap/css/bootstrap.min.css">
+		<link href="
+https://cdn.jsdelivr.net/npm/font-awesome-4@4.7.4/css/font-awesome.min.css
+" rel="stylesheet">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/magnific-popup/magnific-popup.min.css">
 
-    <!-- MENU NAVIGASI -->
-    <nav class="portal-navigation" aria-label="Navigasi utama">
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/theme.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/theme-elements.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/theme-blog.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/theme-shop.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/theme-animate.css">
 
-      <button class="mobile-menu-toggle"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#portalMenu"
-        aria-expanded="false"
-        aria-controls="portalMenu">
-        <i class="fa-solid fa-bars"></i>
-        MENU
-      </button>
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/rs-plugin/css/settings.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/rs-plugin/css/layers.css">
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/vendor/rs-plugin/css/navigation.css">
+		
+		
+		<link href="https://sinkarkes.kemkes.go.id/assets/css/simple-lists.css" rel="stylesheet" media="screen" />
+		<link href="https://sinkarkes.kemkes.go.id/assets/css/../vendor/select2/select2.css" rel="stylesheet" media="screen" />
 
-      <div class="collapse portal-menu" id="portalMenu">
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/skin.css">
 
-        <a href="#beranda" class="portal-nav-link active">
-          BERANDA
-        </a>
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="https://sinkarkes.kemkes.go.id/assets/css/portal/custom.css">
 
-        <div class="portal-dropdown">
-          <a href="#informasi" class="portal-nav-link">
-            INFORMASI
-            <i class="fa-solid fa-caret-down"></i>
-          </a>
+		<!-- Head Libs -->
+		<script src="https://sinkarkes.kemkes.go.id/assets/vendor/modernizr/modernizr.min.js"></script>
+		<script src="https://sinkarkes.kemkesdotgo.id/assets/vendor/jquery/jquery.min.js"></script>
+		<!-- Custom Style untuk QR Code -->
+    <style>
+        /* Menambahkan background putih dan padding pada gambar QR Code di hasil pencarian 
+           agar kontras dan mudah dipindai/dilihat */
+        #result-block img[src*="qr"], 
+        #result-block img[src*="QR"],
+        #result-block img[alt*="QR"],
+        #result-block .qr-code-img {
+            background-color: #ffffff !important;
+            padding: 10px !important; 
+            border-radius: 0 !important; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+            margin: 10px 0;
+            
+            min-width: 150px; 
+            width: 180px;
+            height: auto;
+        }
+    </style>
+		<script>
+			var refreshCaptchaURL = "https://sinkarkes.kemkes.go.id/vaksinasi_int/vaksinasi_int_public/refresh_captcha";
+		</script>
+		
+		
 
-          <div class="portal-dropdown-menu">
-            <a href="#informasi">Informasi Penting</a>
-            <a href="#informasi">Tentang Sistem</a>
-          </div>
-        </div>
+	</head>
+	<body>
+		
+		<div class="body" >
+			<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}'>
+				<div class="header-body">
+					<div class="header-container container ">
+					
+						<div class="header-row">
+						
+							<div class="header-column">
+                                                            <div class="header-logo">
+                                                                <a href="https://sinkarkes.kemkesdotgo.id/" class="skp-brand-legacy">
+                                                                    <img class="skp-brand-kemenkes" src="https://sinkarkes.kemkesdotgo.id/assets/img/kemkes-landscape.png" alt="Kementerian Kesehatan RI" height="30">
+                                                                    <span class="skp-brand-divider"></span>
+                                                                    <img src="https://sinkarkes.kemkesdotgo.id/assets/img/bkk-logo-64.jpg" alt="SINKARKES" height="46">
+                                                                    <span class="skp-brand-legacy-text">
+                                                                        <strong>SINKARKES</strong>
+                                                                        <span>Sistem Informasi Kekarantinaan Kesehatan</span>
+                                                                    </span>
+                                                                </a>
+                                                                <style>
+                                                                    #header .header-logo{height:auto!important;margin-right:10px;}
+                                                                    #header .header-logo a.skp-brand-legacy{display:flex!important;flex-direction:row!important;align-items:center;flex-wrap:nowrap;white-space:nowrap;text-decoration:none!important;}
+                                                                    #header .header-logo a.skp-brand-legacy img{display:block;height:46px!important;width:auto!important;margin:0 10px 0 0!important;top:0!important;position:static!important;}
+                                                                    #header .header-logo a.skp-brand-legacy img.skp-brand-kemenkes{height:30px!important;margin:0!important;}
+                                                                    #header .header-logo .skp-brand-divider{display:block;width:1px;height:38px;background:#d5dde2;margin:0 12px;}
+                                                                    #header .header-logo .skp-brand-legacy-text{display:flex!important;flex-direction:column;justify-content:center;line-height:1.15;white-space:nowrap;}
+                                                                    #header .header-logo .skp-brand-legacy-text strong{display:block;font-size:20px;font-weight:800;letter-spacing:.5px;color:#2b3640;margin:0;}
+                                                                    #header .header-logo .skp-brand-legacy-text span{display:block;font-size:11px;font-weight:600;color:#40ada6;margin:1px 0 0;}
+                                                                    html.sticky-header-active #header .header-logo a.skp-brand-legacy img{height:36px!important;}
+                                                                    html.sticky-header-active #header .header-logo a.skp-brand-legacy img.skp-brand-kemenkes{height:24px!important;}
+                                                                    html.sticky-header-active #header .header-logo .skp-brand-divider{height:28px;}
+                                                                    html.sticky-header-active #header .header-logo .skp-brand-legacy-text strong{font-size:16px;}
+                                                                    html.sticky-header-active #header .header-logo .skp-brand-legacy-text span{display:none;}
+                                                                    @media (max-width:1399px){#header .header-logo .skp-brand-legacy-text span{display:none;}}
+                                                                    @media (max-width:480px){#header .header-logo a.skp-brand-legacy img.skp-brand-kemenkes{height:22px!important;}#header .header-logo a.skp-brand-legacy img{height:36px!important;}#header .header-logo .skp-brand-divider{margin:0 8px;height:28px;}#header .header-logo .skp-brand-legacy-text strong{font-size:16px;}}
+                                                                </style>
+                                                            </div>
+							</div>
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-search hidden-xs">
+										<form id="searchForm" action="https://sinkarkes.kemkes.go.id/portal" method="get">
+											<div class="input-group">
+												<input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+												</span>
+											</div>
+										</form>
+									</div>
+<!--									<nav class="header-nav-top">
+										<ul class="nav nav-pills">
+											<li class="hidden-xs">
+												<a href="https://sinkarkes.kemkes.go.id/portal/profil/visi_misi"><i class="fa fa-angle-right"></i> Tentang Kami</a>
+											</li>
+											<li class="hidden-xs">
+												<a href="https://sinkarkes.kemkes.go.id/contact/contact_us"><i class="fa fa-angle-right"></i> Kontak Kami</a>
+											</li>
+											<li>
+												<span class="ws-nowrap"><i class="fa fa-phone"></i> (021) 4266-920</span>
+											</li>
+										</ul>
+									</nav>-->
+								</div>
+								<div class="header-row">
+									<div class="header-nav">
+										<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+											<i class="fa fa-bars"></i>
+										</button>
+										<ul class="header-social-icons social-icons hidden-xs">
+											
+										</ul>
+										<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+											<nav>
+												<ul class="nav nav-pills" id="mainNav">
+													<li class="dropdown active"><a href="https://sinkarkes.kemkes.go.id/vaksinasi_int/vaksinasi_int_public/add" class="dropdown-toggle">Pelayanan</a><ul class="dropdown-menu"><li class=""><a href="https://sinkarkes.kemkes.go.id/vaksinasi_int/vaksinasi_int_public/add">Registrasi Vaksinasi Internasional</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/portal/welcome/pelayanan_kapal">Layanan Kapal</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/portal/welcome/pelayanan_plbdn">Deklarasi Pos Lintas Batas Negara</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/portal/layanan_penumpang/index">Layanan Izin Sakit dan Laik Terbang</a></li><li class=" active"><a href="https://sinkarkes.kemkes.go.id/welcome/check_document">Cek Nomor Dokumen</a></li></ul></li><li class="dropdown"><a href="https://sinkarkes.kemkes.go.id/#" class="dropdown-toggle">IHR</a><ul class="dropdown-menu"><li class=""><a href="https://sinkarkes.kemkes.go.id/ihr/news_public">Berita</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/ihr/ihr_public">Referensi</a></li></ul></li><li class="dropdown"><a href="https://sinkarkes.kemkes.go.id/news/news_public/index" class="dropdown-toggle">Berita</a><ul class="dropdown-menu"><li class=""><a href="https://sinkarkes.kemkes.go.id/news/news_public/index">Berita Nasional</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/news/news_public/index/beritadunia">Berita Dunia</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/news/news_public/index/berita">Berita Seputar Balai Karkes</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/pengumuman/pengumuman_public/index">Pengumuman</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/events/events_public/index">Kegiatan</a></li></ul></li><li class="dropdown"><a href="https://sinkarkes.kemkes.go.id/reference/reference_public/index" class="dropdown-toggle">Peraturan</a><ul class="dropdown-menu"><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/regulasipresiden">Regulasi Presiden</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/pp">Peraturan Pemerintah</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/regulasimenkes">Regulasi Menteri Kesehatan</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/regulasilainnya">Regulasi Menteri Lainnya</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/regulasip2pl">Regulasi Dirjen P2P</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/regulasikemkes">Regulasi Dirjen Kemkes Lainnya</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/regulasidirjen">Regulasi Dirjen Lainnya</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/uu">UU & Peraturan Lainnya</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/welcome/reference_public/kategori/referensi">Referensi &amp; Peraturan</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/ihr/ihr_public/index">International Health Regulations</a></li></ul></li><li class=""><a href="https://sinkarkes.kemkes.go.id/kkp/kkp_public">Profil Balai Karkes</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/portal/profil/visi_misi">Visi Misi</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/portal/rumah_sakit">Faskes</a></li><li class=""><a href="https://sinkarkes.kemkes.go.id/auth/login"><i class="fa fa-user"></i> Login</a></li>												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 
-        <div class="portal-dropdown">
-          <a href="#panduan" class="portal-nav-link">
-            TATA CARA
-            <i class="fa-solid fa-caret-down"></i>
-          </a>
+			<div role="main" class="main">
+				<div class="container cd-topbar">
+	<h1 class="cd-title"><i class="fa fa-check-square-o"></i> <span data-i18n="page_title">Cek Dokumen</span></h1>
+	<div class="lang-box">
+		<div class="lang-switch" role="group" aria-label="Language / Bahasa">
+			<button type="button" class="lang-btn" data-lang="id" title="Bahasa Indonesia">ID</button>
+			<button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+		</div>
+		<div class="lang-hint"><i class="fa fa-globe"></i> Tersedia dalam 2 bahasa<br><span>Available in 2 languages</span></div>
+	</div>
+</div>
 
-          <div class="portal-dropdown-menu">
-            <a href="#panduan">Panduan Penggunaan</a>
-            <a href="#panduan">Alur Verifikasi</a>
-          </div>
-        </div>
+<section class="section section-default mt-none">
+	<div class="container">
+		<div class="heading heading-border heading-bottom-border heading-primary">
+			<h3 class="heading-primary" data-i18n="what_title">Apa Itu Cek Nomor Dokumen?</h3>
+		</div>
+		<p data-i18n="what_body">Cek nomor dokumen adalah sebuah fitur yang kami sediakan untuk memastikan keaslian dokumen atau sertifikat yang dikeluarkan dan telah terdaftar pada database sertifikat nasional Balai Kekarantinaan Kesehatan Republik Indonesia.</p>
 
-        <a href="#cek-dokumen" class="portal-nav-link">
-          CEK DOKUMEN
-        </a>
+		<!-- Pemberitahuan situs resmi -->
+		<div class="official-notice">
+			<div class="official-notice-icon"><i class="fa fa-shield"></i></div>
+			<div class="official-notice-body">
+				<h4 data-i18n="notice_title">Pemberitahuan Resmi</h4>
+				<p data-i18n="notice_body1">Dokumen dan sertifikat yang <strong>asli</strong> hanya diterbitkan dan dapat diverifikasi melalui website resmi
+					<strong class="official-domain">https://sinkarkes.kemkesdotgo.id</strong>
+					milik Kementerian Kesehatan Republik Indonesia.</p>
+				<p class="mb-none" data-i18n="notice_body2">Hasil pengecekan dari website lain <strong>tidak dapat dijadikan bukti keaslian dokumen</strong>.</p>
+			</div>
+		</div>
 
-        <button class="portal-language"
-          id="languageBtn"
-          type="button">
-          EN
-        </button>
+		<div id="domain-check" class="domain-check" style="display:none;"></div>
 
-      </div>
-    </nav>
-
-  </div>
-</header>
-
-
-  <header class="hero" id="beranda">
-    <div class="container hero-content">
-      <div class="hero-label"><i class="fa-solid fa-shield-halved me-2"></i>LAYANAN INFORMASI DIGITAL</div>
-      <h1 id="heroTitle">Pemeriksaan dan Verifikasi Dokumen</h1>
-      <p id="heroDesc">Periksa data dokumen menggunakan nomor registrasi atau barcode melalui portal simulasi akademik ini.</p>
-      <a href="#cek-dokumen" class="btn btn-light btn-lg fw-bold">Mulai Pemeriksaan <i class="fa-solid fa-arrow-down ms-2"></i></a>
+		<div class="heading heading-border heading-bottom-border heading-primary">
+			<h3 class="heading-primary" data-i18n="fake_title">Waspada Website Tiruan</h3>
+		</div>
+		<ul class="list list-icons list-primary">
+			<li><i class="fa fa-check"></i> <span data-i18n="fake_1">Pastikan alamat di browser <strong>persis</strong> <code>sinkarkes.kemkesdotgo.id</code> &mdash; berakhiran <code>.kemkesdotgo.id</code>, bukan <code>.com</code>, <code>.net</code>, <code>.site</code>, <code>.web.app</code>, atau ejaan mirip (contoh: <em>sinkarkes-kemkes.com</em>, <em>sinkarkesgo.id</em>, <em></em>).</span></li>
+			<li><i class="fa fa-check"></i> <span data-i18n="fake_2">Domain <code>dotgo.id</code> hanya dapat dimiliki instansi pemerintah Indonesia.</span></li>
+			<li><i class="fa fa-check"></i> <span data-i18n="fake_3">Pindai QR Code pada sertifikat lalu <strong>periksa alamat yang terbuka</strong>. QR Code pada dokumen asli selalu mengarah ke <code>sinkarkes.kemkesdotgo.id</code>.</span></li>
+			<li><i class="fa fa-check"></i> <span data-i18n="fake_4">Website resmi <strong>tidak pernah</strong> meminta pembayaran, transfer, password, atau kode OTP untuk melakukan pengecekan dokumen.</span></li>
+			<li><i class="fa fa-check"></i> <span data-i18n="fake_5">Jika menemukan website tiruan atau dokumen yang dicurigai palsu, segera laporkan ke Balai/Balai Besar Kekarantinaan Kesehatan terdekat.</span></li>
+		</ul>
+		<div class="heading heading-border heading-bottom-border heading-primary">
+			<h3 class="heading-primary" data-i18n="howto_title">Tata Cara Pencarian</h3>
+		</div>
+		<p data-i18n="howto_intro">Pengecekan dokumen dapat dilakukan dengan <strong>2 cara</strong>. Pilih yang paling mudah bagi Anda:</p>
+		<div class="cd-methods">
+			<div class="cd-method">
+				<div class="cd-method-head">
+					<span class="cd-method-badge" data-i18n="opt1_badge">Cara 1</span>
+					<h4><i class="fa fa-keyboard-o"></i> <span data-i18n="opt1_title">Input Nomor Dokumen</span></h4>
+					<p data-i18n="opt1_sub">Ketik nomor dokumen pada formulir di bawah halaman ini.</p>
+				</div>
+				<ol class="list list-ordened list-ordened-style-3 list-primary">
+					<li data-i18n="howto_1">Pilih Dokumen atau Sertifikat yang akan dicek pada kolom pilihan Jenis Dokumen</li>
+					<li data-i18n="howto_2">Masukan No Registrasi untuk Buku Kesehatan Kapal atau Nomor ICV pada kolom Nomor Dokumen/IMO No/Barcode untuk melakukan pengecekan keaslian Dokumen</li>
+					<li data-i18n="howto_3">Masukan Barcode yang tertera pada sertifikat pada kolom Nomor Dokumen/IMO No/Barcode untuk melakukan pengecekan Sertifikat Lainnya</li>
+					<li data-i18n="howto_4">Lalu klik tombol Cari yang terdapat dibawah kolom Nomor Dokumen/IMO No/Barcode </li>
+				</ol>
+				<a href="#jenis_dokumen" class="btn btn-primary btn-sm cd-method-cta"><i class="fa fa-arrow-down"></i> <span data-i18n="opt1_cta">Ke Formulir Pencarian</span></a>
+			</div>
+			<div class="cd-method">
+				<div class="cd-method-head">
+					<span class="cd-method-badge" data-i18n="opt2_badge">Cara 2</span>
+					<h4><i class="fa fa-qrcode"></i> <span data-i18n="opt2_title">Scan QR Code</span></h4>
+					<p data-i18n="opt2_sub">Lebih cepat, tanpa mengetik. Setiap dokumen memiliki QR Code.</p>
+				</div>
+				<ol class="list list-ordened list-ordened-style-3 list-primary">
+					<li data-i18n="qr_1">Buka kamera atau aplikasi pemindai QR di smartphone Anda.</li>
+					<li data-i18n="qr_2">Arahkan kamera ke QR Code yang tertera pada dokumen.</li>
+					<li data-i18n="qr_3">Ketuk link yang muncul untuk melihat hasil pengecekan dokumen.</li>
+				</ol>
+				<div class="cd-method-tip"><i class="fa fa-shield"></i> <span data-i18n="qr_tip">Sebelum mengetuk link, pastikan alamatnya diawali <strong>https://sinkarkes.kemkesdotgo.id</strong>.</span></div>
+			</div>
+		</div>
     </div>
-    <div class="hero-decoration"></div>
-  </header>
+</section>
 
-  <main class="container content-wrap">
-    <section class="notice-card mb-4" id="informasi">
-      <div class="notice-icon"><i class="fa-solid fa-circle-info"></i></div>
-      <div>
-        <h2>Informasi Penting</h2>
-        <p>Website ini dibuat untuk keperluan pembelajaran dan demonstrasi. Seluruh data yang ditampilkan merupakan data contoh. Hasil pencarian tidak dapat digunakan sebagai bukti keaslian dokumen.</p>
-      </div>
-    </section>
-
-    <section class="section-block" id="panduan">
-      <div class="section-heading">
-        <span class="eyebrow">PANDUAN PENGGUNA</span>
-        <h2>Bagaimana cara melakukan pemeriksaan?</h2>
-        <p>Gunakan salah satu metode berikut untuk mencoba fitur verifikasi simulasi.</p>
-      </div>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <article class="method-card h-100">
-            <div class="method-icon"><i class="fa-solid fa-keyboard"></i></div>
-            <span class="step-tag">CARA 1</span>
-            <h3>Input Nomor Dokumen</h3>
-            <ol>
-              <li>Pilih jenis dokumen pada formulir pemeriksaan.</li>
-              <li>Masukkan nomor dokumen atau barcode.</li>
-              <li>Tekan tombol <strong>Periksa Dokumen</strong>.</li>
-              <li>Hasil simulasi akan ditampilkan di bawah formulir.</li>
-            </ol>
-            <a href="#cek-dokumen" class="btn btn-teal-outline">Buka Formulir <i class="fa-solid fa-arrow-right ms-1"></i></a>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="method-card h-100">
-            <div class="method-icon"><i class="fa-solid fa-qrcode"></i></div>
-            <span class="step-tag">CARA 2</span>
-            <h3>Pindai QR Code</h3>
-            <ol>
-              <li>Buka kamera atau pemindai QR pada perangkat.</li>
-              <li>Pindai QR demo yang disediakan pada hasil contoh.</li>
-              <li>Salin kode dokumen dari data demo.</li>
-              <li>Masukkan kode tersebut pada formulir pemeriksaan.</li>
-            </ol>
-            <div class="method-tip"><i class="fa-solid fa-lightbulb me-2"></i>Fitur kamera/QR scanner akan ditambahkan pada tahap JavaScript.</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block search-section" id="cek-dokumen">
-      <div class="section-heading">
-        <span class="eyebrow">FORMULIR PENCARIAN</span>
-        <h2>Cek Dokumen</h2>
-        <p>Lengkapi jenis dokumen dan nomor identifikasi di bawah ini.</p>
-      </div>
-      <div class="search-card">
-        <form id="verificationForm" novalidate>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="jenis_dokumen" class="form-label">Jenis Dokumen <span class="text-danger">*</span></label>
-              <select class="form-select form-select-lg" id="jenis_dokumen" required>
-                <option value="">-- Pilih Jenis Dokumen --</option>
-                <option value="icv">ICV (International Certificate of Vaccination)</option>
-                <option value="icv-haji">ICV Haji</option>
-                <option value="phqc">PHQC (Port Health Quarantine Clearance)</option>
-                <option value="izin_karantinaan">Izin Karantina COP</option>
-                <option value="health_book">Buku Kesehatan Kapal</option>
-                <option value="sscec">Sertifikat Sanitasi Kapal (SSCEC/SSCC)</option>
-                <option value="pengujian_kesehatan">Pengujian Kesehatan</option>
-                <option value="pemeriksaan_obat_alkes_kapal">Pengawasan Obat dan Alkes Kapal</option>
-                <option value="sertifikat_air">Pengawasan Kualitas Air</option>
-                <option value="laik_terbang">Sertifikat Laik Terbang</option>
-                <option value="sanitasi_jasaboga">Higienis Jasa Boga</option>
-                <option value="sailing_permit">Sailing Permit</option>
-                <option value="izin_jenazah">Izin Lalu Lintas Jenazah</option>
-                <option value="izin_sakit">Izin Lalu Lintas Orang Sakit</option>
-                <option value="omkaba">Health Certificate</option>
-                <option value="kontraindikasi">Kontraindikasi</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="no_dokumen" class="form-label">Nomor Dokumen / IMO No / Barcode <span class="text-danger">*</span></label>
-              <input class="form-control form-control-lg text-uppercase" id="no_dokumen" type="text" placeholder="Contoh: DEMO-2026-001" autocomplete="off" required>
-              <div class="form-text">Masukkan kode contoh untuk mencoba sistem.</div>
-            </div>
-          </div>
-          <div class="d-flex flex-wrap gap-2 mt-4">
-            <button class="btn btn-teal btn-lg" type="submit" id="searchBtn"><i class="fa-solid fa-magnifying-glass me-2"></i>Periksa Dokumen</button>
-            <button class="btn btn-outline-secondary btn-lg" type="reset"><i class="fa-solid fa-rotate-left me-2"></i>Reset</button>
-          </div>
-        </form>
-        <div id="result-block" class="result-block mt-4" aria-live="polite"></div>
-      </div>
-      <div class="demo-hint mt-3">
-        <strong><i class="fa-solid fa-flask me-2"></i>Nomor untuk pengujian:</strong>
-        <span>DEMO-2026-001</span><span>DEMO-2026-002</span><span>DEMO-2026-003</span>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-      <div><strong>PORTAL DOKUMEN — SIMULASI AKADEMIK</strong><div class="small">Media pembelajaran pengembangan sistem informasi.</div></div>
-      <div class="small">© <span id="year"></span> Proyek Demo Akademik. Bukan situs resmi pemerintah.</div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="container">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="col-md-4 control-label" data-i18n="lbl_type">Jenis Dokumen</label>
+			<div class="col-md-8">
+				<select name="jenis_dokumen" id="jenis_dokumen" class="form-control">
+					<option value="" data-i18n="opt_choose">--Pilih--</option>
+											<option value="icv" data-label-id="ICV" selected>ICV</option>
+											<option value="icv-haji" data-label-id="ICV Haji" >ICV Haji</option>
+											<option value="phqc" data-label-id="PHQC" >PHQC</option>
+											<option value="izin_karantinaan" data-label-id="Izin Karantina COP" >Izin Karantina COP</option>
+											<option value="health_book" data-label-id="Buku Kesehatan Kapal" >Buku Kesehatan Kapal</option>
+											<option value="sscec" data-label-id="Sertifikat Sanitasi Kapal (SSCEC, SSCC)" >Sertifikat Sanitasi Kapal (SSCEC, SSCC)</option>
+											<option value="pengujian_kesehatan" data-label-id="Pengujian Kesehatan" >Pengujian Kesehatan</option>
+											<option value="pemeriksaan_obat_alkes_kapal" data-label-id="Pengawasan Obat-obatan dan Alkes Kapal" >Pengawasan Obat-obatan dan Alkes Kapal</option>
+											<option value="sertifikat_air" data-label-id="Pengawasan Kualitas Air" >Pengawasan Kualitas Air</option>
+											<option value="laik_terbang" data-label-id="Sertifikat Laik Terbang" >Sertifikat Laik Terbang</option>
+											<option value="sanitasi_jasaboga" data-label-id="Higienis Jasa Boga" >Higienis Jasa Boga</option>
+											<option value="sailing_permit" data-label-id="Sertifikat Sanitasi Kapal Sailing Permit" >Sertifikat Sanitasi Kapal Sailing Permit</option>
+											<option value="izin_jenazah" data-label-id="Izin Lalu Lintas Jenazah" >Izin Lalu Lintas Jenazah</option>
+											<option value="izin_sakit" data-label-id="Izin Lalu Lintas Orang Sakit" >Izin Lalu Lintas Orang Sakit</option>
+											<option value="omkaba" data-label-id="Health Certificate" >Health Certificate</option>
+											<option value="kontraindikasi" data-label-id="Kontraindikasi" >Kontraindikasi</option>
+									</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" data-i18n="lbl_number">Nomor Dokumen/IMO No/Barcode/No. Porsi</label>
+			<div class="col-md-8">
+				<input type="text" id="no_dokumen" name="no_dokumen" class="form-control" value=""/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-4 col-md-8">
+				<a href="" id="btn_cari" class="btn btn-primary"><i class="fa fa-search"></i> <span data-i18n="btn_search">Cari</span></a>
+				<button id="btn_print" class="btn btn-default" type="button" style="opacity: 0; background: transparent; border: none; margin-left: 10px; width: 50px; cursor: default;" title="">
+                                &nbsp;
+                            </button>
+			</div>
+		</div>
+	</form>
+</div>
+<section class="section section-default">
+	<div class="container">
+		<div id="result-block" style="display: none;"></div>
+		<p id="result-disclaimer" class="result-disclaimer" style="display:none;">
+			<i class="fa fa-info-circle"></i>
+			<span data-i18n="disclaimer">Hasil verifikasi ini hanya sah apabila diakses melalui <strong>https://sinkarkes.kemkesdotgo.id</strong>.</span>
+			<span data-i18n="verified_at">Diverifikasi pada</span> <span id="verified-at"></span>.
+		</p>
+	</div>
+</section>
+<style>
