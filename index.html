@@ -15,26 +15,94 @@
 <body>
   <div class="demo-strip"><i class="fa-solid fa-circle-info me-2"></i>PROYEK SIMULASI AKADEMIK — BUKAN LAYANAN RESMI DAN TIDAK TERHUBUNG KE DATABASE PEMERINTAH</div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <span class="brand-mark"><i class="fa-solid fa-file-circle-check"></i></span>
-        <span><strong>PORTAL DOKUMEN</strong><small class="d-block text-secondary">Sistem Verifikasi · Demo Akademik</small></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Buka menu">
-        <span class="navbar-toggler-icon"></span>
+
+<header class="portal-header">
+  <div class="container portal-header-inner">
+
+    <!-- LOGO DAN NAMA WEBSITE -->
+    <a class="portal-brand" href="#beranda">
+      <span class="brand-mark">
+        <i class="fa-solid fa-file-circle-check"></i>
+      </span>
+
+      <span class="brand-text">
+        <strong>PORTAL DOKUMEN</strong>
+        <small>Sistem Verifikasi · Demo Akademik</small>
+      </span>
+    </a>
+
+    <!-- SEARCH BAR -->
+    <form class="portal-search" role="search" id="headerSearch">
+      <input
+        type="search"
+        id="headerSearchInput"
+        placeholder="Search..."
+        aria-label="Cari halaman"
+      >
+      <button type="submit" aria-label="Cari">
+        <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#panduan">Tata Cara</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cek-dokumen">Cek Dokumen</a></li>
-          <li class="nav-item"><button class="btn btn-sm btn-outline-teal ms-lg-2" id="languageBtn" type="button">EN</button></li>
-        </ul>
+    </form>
+
+    <!-- MENU NAVIGASI -->
+    <nav class="portal-navigation" aria-label="Navigasi utama">
+
+      <button class="mobile-menu-toggle"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#portalMenu"
+        aria-expanded="false"
+        aria-controls="portalMenu">
+        <i class="fa-solid fa-bars"></i>
+        MENU
+      </button>
+
+      <div class="collapse portal-menu" id="portalMenu">
+
+        <a href="#beranda" class="portal-nav-link active">
+          BERANDA
+        </a>
+
+        <div class="portal-dropdown">
+          <a href="#informasi" class="portal-nav-link">
+            INFORMASI
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+
+          <div class="portal-dropdown-menu">
+            <a href="#informasi">Informasi Penting</a>
+            <a href="#informasi">Tentang Sistem</a>
+          </div>
+        </div>
+
+        <div class="portal-dropdown">
+          <a href="#panduan" class="portal-nav-link">
+            TATA CARA
+            <i class="fa-solid fa-caret-down"></i>
+          </a>
+
+          <div class="portal-dropdown-menu">
+            <a href="#panduan">Panduan Penggunaan</a>
+            <a href="#panduan">Alur Verifikasi</a>
+          </div>
+        </div>
+
+        <a href="#cek-dokumen" class="portal-nav-link">
+          CEK DOKUMEN
+        </a>
+
+        <button class="portal-language"
+          id="languageBtn"
+          type="button">
+          EN
+        </button>
+
       </div>
-    </div>
-  </nav>
+    </nav>
+
+  </div>
+</header>
+
 
   <header class="hero" id="beranda">
     <div class="container hero-content">
