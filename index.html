@@ -422,7 +422,7 @@ var CD_LANG = 'id';
 function cdEscape(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 
 function cdRenderDomainCheck(lang){
-	var OFFICIAL_HOST = 'sinkarkes.kemkesdotgo.id';
+	var OFFICIAL_HOST = 'https://testing-woad-eight-22.vercel.app';
 	var host = (window.location.hostname || '').toLowerCase();
 	var isDev = /^(localhost|127\.0\.0\.1|::1|10\.|192\.168\.)/.test(host);
 	var box = document.getElementById('domain-check');
