@@ -428,7 +428,7 @@ function cdRenderDomainCheck(lang){
 	var box = document.getElementById('domain-check');
 	if (!box) return;
 	var m = CD_DOMAIN_MSG[lang] || CD_DOMAIN_MSG.id, state, icon;
-	if (host === OFFICIAL_HOST && window.location.protocol === 'https:') { state = 'ok'; icon = 'fa-lock'; }
+	if (host === OFFICIAL_HOST && window.location.protocol === 'https:') { state = 'ok'; icon = 'ok'; }
 	else if (isDev) { state = 'dev'; icon = 'fa-wrench'; }
 	else { state = 'bad'; icon = 'fa-exclamation-triangle'; }
 	var link = '<a href="https://' + OFFICIAL_HOST + '/welcome/check_document">https://' + OFFICIAL_HOST + '</a>';
